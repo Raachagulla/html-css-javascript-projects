@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+  background-color:rgba(0, 0, 255, 0.191);
+}
+.container{
+display:flex;
+position:absolute;
+transform:translate(-50%,-50%);
+left:50%;
+top:50%;
+flex-direction: column;
+height:60vh;
+width:300px;
+background-color:white;
+align-items: center;
+justify-content:center;
+border:5px solid rgba(0, 0, 0, 0.486);
+border-radius:10px;
+background: linear-gradient(to right,rgba(128, 0, 128, 0.525),rgba(255, 166, 0, 0.629));
+}
+.weatherapp{
+    padding:20px 0;
+}
+.location{
+    padding:0 0 10px 0;
+ 
+}
+#btn{
+    padding:0 5px;
+    margin:0;
+}
+#temperature{
+    font-size:50px;
+    font-weight: 700;
+}
+#place{
+    font-weight:600;
+}
+#text{
+    border:2px solid rgba(238, 130, 238, 0.569);
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+
+}
+#btn{
+    background-color:rgb(130, 16, 130);
+    color:beige;
+    border-radius:5px;
+}
+#text:focus{
+  background-color: rgba(178, 26, 150, 0.329);
+  color:white;
+}

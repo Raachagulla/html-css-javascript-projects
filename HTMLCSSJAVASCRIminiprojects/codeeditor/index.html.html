@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.total{
+    display:flex;
+    gap:10px;
+}
+#btn{
+    margin-bottom: 10px;
+    
+}
+.button{
+    display:flex;
+    justify-content: center;
+}
+#text{
+    overflow:scroll;
+}
+    </style>
+    <div class="container">
+        <div class="button"><button id="btn">Run</button></div>
+        <div class="total">
+            <div class="text-area">
+             <textarea id="text"cols="50" ></textarea>
+            </div>
+            <div class="form">
+                <iframe id="frame">
+
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        let btn=document.getElementById("btn")
+        let text=document.getElementById("text")
+        let frame=document.getElementById("frame")
+        btn.addEventListener("click",display)
+        function display(){
+            console.log(3)
+         let code= text.value 
+         frame.contentWindow.document.body.innerHTML=code  
+        }
+    </script>
+</body>
+</html>

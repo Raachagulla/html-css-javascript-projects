@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+
+    }
+    body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to right,rgba(238, 130, 238, 0.51),rgba(128, 0, 128, 0.576))
+    }.text{
+        background-color: rgba(255, 0, 221, 0.264);
+        color:white;
+    }
+    .container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .counting{
+        background-color: rgba(0, 0, 0, 0.65);
+        width:200px;
+        height:40px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        gap:20px;
+        position:relative;
+        top:-20px;
+    }
+    .count{
+        color:white;
+    }
+    .words{
+        color:white;
+    }
+    .characters{
+        color:burlywood;
+    }
+    .word{
+        color:burlywood;
+    }
+
+</style>
+   <div class="container">
+    <h1>Word and Letters counter</h1>
+    <textarea class="text" cols="50" rows="10"></textarea>
+    <div class="counting">
+        <div>
+      <div>  <h3 class="count">0</h4></div>
+        <div> <h4 class="characters">Characters</h4></div>
+    </div>
+    <div>
+        <div>  <h3 class="words">0</h4></div>
+         <div> <h4 class="word">words</h4></div>
+        </div>   
+    </div>
+</div>
+    <script>
+        let btn=document.getElementById("btn")
+        let text=document.querySelector(".text")
+        let word=document.querySelector(".words")
+        let count=document.querySelector(".count")
+    let content=''
+     text.addEventListener("input",getdata)
+     function getdata(){
+     content=text.value  
+     count.innerText=content.length
+     let words=content.split(" ")
+     word.innerText=words.length
+     console.log(content)
+     }
+     
+
+    </script>
+</body>
+</html>
